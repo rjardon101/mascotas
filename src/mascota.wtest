@@ -1,0 +1,26 @@
+import mascotas.*
+
+describe "test de mascotas" {
+	
+//	var piolin = new Canario (duenio = orson, entrenador = orson, amorRecibido = 5, experienciaRecibida= 0)
+	var silvestre = new Gato (esTerritorial= 20, porcentajeAdicional = porcentaje, diversion = 30, entrenador= orson, amorRecibido = 5, experienciaRecibida= 0)
+	var buddy = new Perro(nivelDeGuardian = 80, entrenador= orson, amorRecibido = 5, experienciaRecibida= 0)
+	var lasy = new Labrador(nivelDeGuardian = 100, entrenador= orson, amorRecibido = 5, experienciaRecibida= 0)
+	var orson = new Duenio(edad = 30, afectoDado = 100, mascotas = #{piolin, silvestre, buddy, lasy}, diversionBase = 80)
+	
+	test "el dueño es feliz" {
+		porcentaje.porcentaje(20)
+		assert.that(orson.esFeliz())
+	}
+	
+	test "calculo de seguridad de un perro" {
+		assert.equals(lasy.nivelDeGuardian(130))
+	}
+	
+	test "una mascota es entrenada" {
+		lasy.entrenar()
+		assert.equals(lasy.seguridadDeMascota(). )
+	}
+	
+	
+}
